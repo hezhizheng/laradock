@@ -550,6 +550,11 @@ services:
         - "${NGINX_HOST_HTTP_PORT}:80"
         - "${NGINX_HOST_HTTPS_PORT}:443"
         - "${VARNISH_BACKEND_PORT}:81"
+        # 暴露多个端口 视情况增加
+        - "7400:7400"
+        - "7401:7401"
+        - "7402:7402"
+        - "7403:7403"
       depends_on:
         - php-fpm
       networks:
